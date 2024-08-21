@@ -1,6 +1,6 @@
 segment .data
 	LF equ 0xA ; Line Feed
-	NULL equ 0xD ; Final da String
+	NULL equ 0x0 ; Final da String
 	SYS_EXIT equ 0x1 ; Codigo de chamada para finalizar
 	RET_EXIT equ 0x0 ; Operacao com Sucesso
 	STD_IN equ 0x0 ; Entrada padrao
@@ -8,10 +8,10 @@ segment .data
 	SYS_READ equ 0x3 ; Operacao de Leitura
 	SYS_WRITE equ 0x4 ; Operacao de Escrita
 	SYS_CALL equ 0x80 ; Envia informacao ao SO
-	TAM_BUFFER equ 0xA
+	TAM_BUFFER equ 0xA ; Tamanho do buffer e 10
 
 segment .bss
-	BUFFER resb 0x1	
+	BUFFER resb 0x1	;Reserva um byte para o buffer
 
 segment .text
 	
